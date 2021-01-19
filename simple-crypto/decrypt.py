@@ -1,11 +1,5 @@
-import random 
-import json
 import re
-
-# Constant
-keycode = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 \n\t"
-keyRandom = ["A", "B", "C", "D", "E"]
-zeroKeyCode = "F"
+from constant import keycode
 
 keypairs = [
     [2, -3],
@@ -26,7 +20,7 @@ fileSourceData = open(fileSource, 'r').read()
 fileToArray = [fileSourceData[i:i+4] for i in range(0, len(fileSourceData), 4)]
 fileToNum = list(map(lambda x: parseFileToNuber(x), fileToArray))
 
-mapedMatrix = [[],[]]
+mapedMatrix = [[], []]
 if(len(list(fileToNum)) % 2 == 1) :
     fileToNum.append(len(keycode) - 1)
 
