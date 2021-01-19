@@ -1,0 +1,1 @@
+Hello Ini adalah  contoh pesan sebelum di enkripsi dengan simple crypto
