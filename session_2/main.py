@@ -39,6 +39,7 @@ class Radio:
         print(f'Active Channel : {self.activeChannel}')
         print("------------------------------\n")
 
+# Car
 
 carRadio = Radio('Simbada', "FM", "DC")
 carRadio.turnOn()
@@ -49,3 +50,14 @@ carRadio.printData()
 carRadio.turnOff()
 carRadio.printData()
 
+# Home
+
+homeRadio = Radio('SHARP', "AM/FM", "AC")
+
+homeRadio.turnOn()
+homeRadio.scanChannel()
+homeRadio.setChannel(homeRadio.channels[4])
+homeRadio.printData()
+
+homeRadio.turnOff()
+homeRadio.printData()
